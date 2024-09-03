@@ -1,0 +1,46 @@
+:root{
+    --backgroundColor:#0C1D36;
+    --secondaryColor:#f9f9f9;
+    --accentuation:#F9CC0B;
+
+}
+
+header{
+
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--secondaryColor);
+  font-family: Almarai,Arial;
+
+  border-bottom:0.1px#0C1D36 solid;
+  margin: -10px;
+  margin-bottom: 20px;
+  
+}
+
+body{
+    background-color: var(--backgroundColor);
+}
+
+
+a{
+ color: var(--backgroundColor);
+ text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    float: right;
+    margin-right: -60px;
+}
+
+.icon{
+    width: 30px;
+}
+
+.logo{
+    margin-left: -60px;
+}
