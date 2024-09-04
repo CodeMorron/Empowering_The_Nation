@@ -5,10 +5,12 @@
 
 }
 
+/*NAV BAR STYLING*/
 header{
 
   display: flex;
   justify-content: space-around;
+  align-items: center;
   background-color: var(--secondaryColor);
   font-family: Almarai,Arial;
 
