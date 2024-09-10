@@ -13,7 +13,7 @@
 header{
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--secondaryColor);
   font-family: Almarai,Arial;
@@ -34,22 +34,84 @@ a{
  text-decoration: none;
 }
 
+.link{
+    transition: all ease 0.5s;
+    border-radius: 20px;
+}
+
+
+
+.link:hover{
+        background-color: var(--backgroundColor);
+        color: var(--secondaryColor);
+        padding: 6px 18px;
+ }
+
+
 ul{
     list-style: none;
     display: flex;
     align-items: center;
     column-gap: 20px;
     float: right;
-    margin-right: -60px;
+    margin-right: 40px;
+
+   
+
+    
 }
+
+
 
 .icon{
     width: 30px;
 }
 
 .logo{
-    margin-left: -60px;
+    
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+   
 }
+
+.signInBtn{
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: none;
+
+    font-family: Almarai,Arial;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: var(--backgroundColor);
+    color: var(--secondaryColor);
+
+    cursor: pointer;
+
+    
+}
+
+.registerBtn{
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: none;
+
+    font-family: Almarai,Arial;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: var(--secondaryColor);
+    color: var(--backgroundColor);
+
+    cursor: pointer;
+    transition: all ease 0.5s;
+
+    
+}
+
+.registerBtn:hover{
+    background-color: #e3e1e17e;
+}
+
 
 /*DETAIL PAGE STYLING*/
 
@@ -186,4 +248,66 @@ ul{
     background: transparent;
     border: none;
     cursor: pointer;
+}
+
+/*CONTACT PAGE STYLING*/
+
+.contactBox{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    row-gap: 20px;
+
+    width: 500px;
+
+    color: var(--backgroundColor);
+
+    background-color: var(--secondaryColor);
+
+    border: 1px solid var(--secondaryColor);
+    border-radius: 10px;
+
+    padding: 20px;
+
+
+    input{
+        border-radius: 5px;
+        padding: 15px;
+        border:#0C1D36 solid 1px;
+    }
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.sendBtn{
+    padding: 15px 30px;
+    border-radius: 10px;
+    
+    font-family: Almarai,Arial;
+    font-weight: 700;
+
+    font-size: 16px;
+
+    color: var(--secondaryColor);
+    background-color: var(--accentuation);
+    border: none;
+
+    cursor: pointer;
+
+    transition: all ease 0.5s;
+}
+
+.sendBtn:hover{
+    color: var(--secondaryColor);
+    background-color: var(--backgroundColor);
 }

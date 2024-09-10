@@ -10,9 +10,7 @@
     font-family: Almarai,Arial;
 }
 
-
 header{
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,24 +20,73 @@ header{
     border-bottom:0.1px var(--backgroundColor) solid;
     margin: -10px;
     margin-bottom: 20px;
-    
-  }
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    float: right;
+    margin-right: -60px;
+}
+
+.icon{
+    width: 30px;
+}
+
+.logo{
+    width: 80px;
+    margin-left: -60px;
+}
   
-  body{
-      background-color: var(--backgroundColor);
-  }
+body{
+    background-color: var(--backgroundColor);
+}
   
   
-  a{
+a{
    color: var(--backgroundColor);
    text-decoration: none;
-  }
-  
-  ul{
-      list-style: none;
-      display: flex;
-      align-items: center;
-      column-gap: 20px;
-      float: right;
-      margin-right: -60px;
-  }
+}
+
+
+.sixWeekCourses{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--backgroundColor);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+
+    img{
+        border-radius: 10px;
+    }
+}
+
+.course1,.course2,.course3{
+    .course_name{
+        width: 70px;
+        height: 30px;
+        resize: none;
+        background-color: var(--backgroundColor);
+        color: var(--secondaryColor);
+    }
+
+    p{
+        display: block;
+        background-color: var(--secondaryColor);
+        color: var(--backgroundColor);
+        border-radius: 5px;
+
+        width: 300px;
+        height: 150px;
+        resize: none;
+    }
+}
+
+
+
+
+
