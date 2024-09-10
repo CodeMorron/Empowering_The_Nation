@@ -39,3 +39,22 @@ a{
     width: 30px;
 }
 
+h1{
+    color: #f9f9f9; text-align: center; 
+    text-decoration: underline;
+}
+
+p{
+    color: #f9f9f9;
+    display: flex;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 20px
+}
+
+.mainimage{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
