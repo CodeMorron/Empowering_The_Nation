@@ -39,7 +39,7 @@ a{
     width: 30px;
 }
 
-h1{
+h1,h2{
     color: #f9f9f9; text-align: center; 
     text-decoration: underline;
 }
@@ -58,3 +58,17 @@ p{
     align-items: center;
 }
 
+.reviews{
+    display: block;
+    justify-content: left;
+    align-items: center;
+}
+.reviews{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--backgroundColor);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+}
