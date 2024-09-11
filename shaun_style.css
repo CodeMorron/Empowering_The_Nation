@@ -40,12 +40,12 @@ a{
 }
 
 h1,h2{
-    color: #f9f9f9; text-align: center; 
+    color: var(--secondaryColor); text-align: center; 
     text-decoration: underline;
 }
 
 p{
-    color: #f9f9f9;
+    color: var(--secondaryColor);
     display: flex;
     margin-right: 15px;
     margin-left: 15px;
