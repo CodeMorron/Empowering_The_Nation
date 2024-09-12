@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My cart</title>
+    <link rel="stylesheet" href="arain_stlyle.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+    <header>
+        <img src="image_Arain/logo.png" alt=""  class="logo">
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./six_week.html">Cources</a></li>
+                <li><a href="">Contact</a></li>
+                <button><a href="">Sign In</a></button>
+                <button><a href="">Register</a></button>
+                <li>
+                    <img src="image_Arain/shopping-cart.png" alt="" class="icon">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="myCourses">
+            <h1>My Cart:</h1>
+
+            <div class="selectedCourses">
+                <img src="image_Arain/trialPic.png" alt="" width="200px" height="200px">
+                <p>Ths is course 1 a short summer of the course will apear here and the price <br><br>R00</p>
+            </div>
+
+            <div class="selectedCourses">
+                <img src="image_Arain/trialPic.png" alt="" width="200px" height="200px">
+                <p>This is course 2 a short summer of the course will apear here and the price <br><br>R00</p>
+            </div>
+
+            <div class="selectedCourses">
+                <img src="image_Arain/trialPic.png" alt="" width="200px" height="200px">
+                <p>This is course 3 a short summer of the course will apear here and the price <br><br>R00</p>
+            </div>
+
+        </div>
+
+        <div id="totalFees">
+            <p id="cartTotal">Cart Total</p>
+            <p> Discount: R00</p>
+            <p>Total: R00</p>
+
+            <button class="btnCheckOut">Checkout</button>
+        </div>
+
+        <div class="personalInfo">
+      
+            <div class="personalInfoBox">
+              <h1>Enter your details:</h1>
+            
+              <label for="name">Name</label>
+              <input type="text" placeholder="Enter your name" name="name"/>
+              <label for="surname">Surname</label>
+              <input type="text" placeholder="Enter your surname" name="surname"/>
+              <label for="name">Email</label>
+              <input type="text" placeholder="Enter your email" name="email"/>
+              <label for="message">Message</label>
+              <textarea type="text" placeholder="Enter your message" name="message" rows="10" cols="40"></textarea>
+      
+              <button>SEND</button>
+            </div>
+
+        </div>
+        
+    </main>
+    
+</body>
+</html>

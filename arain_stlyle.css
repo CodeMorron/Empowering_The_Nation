@@ -69,24 +69,118 @@ a{
     .course_name{
         width: 70px;
         height: 30px;
-        resize: none;
         background-color: var(--backgroundColor);
         color: var(--secondaryColor);
+        border-style:  none;
+        text-decoration: underline;
     }
 
     p{
         display: block;
-        background-color: var(--secondaryColor);
-        color: var(--backgroundColor);
+        background-color: var(--backgroundColor);
+        color: var(--secondaryColor);
+        border-style: groove;
         border-radius: 5px;
-
         width: 300px;
         height: 150px;
-        resize: none;
+        padding: 5px;
     }
 }
 
+.myCourses{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--backgroundColor);
+    width: 600px;
+    height: auto;
+    padding: 10px;
+    margin-top: 15px;
+    float: left;
+    flex-direction: column;
 
+    img{
+        border-radius: 15px;
+    }
+}
 
+h1{
+    color: var(--secondaryColor);
+    text-decoration: underline;
+    padding-left: 10px;
+}
 
+.selectedCourses{
+    display: flex;
+    float: left;
+    row-gap: 5px;
+    border-style: double;
+    border-radius: 10px;
+    border-color: var(--backgroundColor);
+    background-color: var(--secondaryColor);
+    height: min-content;
+    color: var(--backgroundColor);
+    border-width: 10px;
+    padding: 5px;
+}
 
+#totalFees{
+    background-color: var(--secondaryColor);
+    color: var(--backgroundColor);
+    border-style: double;
+    border-radius: 10px;
+    border-width: 10px;
+    border-color: var(--backgroundColor);
+    width: 580px;
+    height: 500px;
+    margin-top: 115px;
+    float: right;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-left: 15px;
+
+    p{
+        font-size: 25px;
+        font-weight: 600;
+        padding: 10px;
+    }
+}
+
+#cartTotal{
+    text-decoration: underline;
+}
+
+.personalInfoBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    width: 500px;
+    color: var(--backgroundColor);
+    background-color: var(--secondaryColor);
+    border-style: double;
+    border-width: 10px;
+    border-radius: 10px;
+    padding: 20px;
+
+    h1{
+        color: var(--backgroundColor);
+    }
+
+    input{
+        border-radius: 5px;
+        padding: 15px;
+    }
+}
+
+.personalInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    float: inline-end;
+    padding-right: 20px;
+}   
