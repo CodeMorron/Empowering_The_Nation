@@ -262,7 +262,7 @@ ul{
 
     align-items: center;
 
-    row-gap: 20px;
+    row-gap: 4px;
 
     width: 500px;
 
@@ -281,13 +281,27 @@ ul{
         padding: 15px;
         border:#0C1D36 solid 1px;
     }
+
+    iframe{
+        border: none;
+
+        width: 400px;
+        height: 200px;
+        border-radius: 10px;
+    }
 }
 
 .contact{
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
 }   
+
+.contactContainer{
+    display: flex;
+
+    column-gap: 40px;
+}
 
 .sendBtn{
     padding: 15px 30px;
@@ -311,3 +325,11 @@ ul{
     color: var(--secondaryColor);
     background-color: var(--backgroundColor);
 }
+
+.venuesContainer{
+    display: flex;
+
+    column-gap: 40px;
+}
+
+
