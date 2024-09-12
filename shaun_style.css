@@ -5,27 +5,25 @@
 
 }
 
+*{
+    font-family: Almarai,Arial;
+}
+
+/*NAV BAR STYLING*/
 header{
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--secondaryColor);
-    font-family: Almarai,Arial;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondaryColor);
+  font-family: Almarai,Arial;
+
+  border-bottom:0.1px var(--backgroundColor) solid;
+  margin: -10px;
+  margin-bottom: 20px;
   
-    border-bottom:0.1px var(--backgroundColor) solid;
-    margin: -10px;
-    margin-bottom: 20px;
-    
 }
-ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-    float: right;
-    margin-right: -60px;
-}
+
 body{
     background-color: var(--backgroundColor);
 }
@@ -35,8 +33,83 @@ a{
  color: var(--backgroundColor);
  text-decoration: none;
 }
+
+.link{
+    transition: all ease 0.5s;
+    border-radius: 20px;
+}
+
+
+
+.link:hover{
+        background-color: var(--backgroundColor);
+        color: var(--secondaryColor);
+        padding: 6px 18px;
+ }
+
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    float: right;
+    margin-right: 40px;
+
+   
+
+    
+}
+
+
+
 .icon{
     width: 30px;
+}
+
+.logo{
+    
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+   
+}
+
+.signInBtn{
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: none;
+
+    font-family: Almarai,Arial;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: var(--backgroundColor);
+    color: var(--secondaryColor);
+
+    cursor: pointer;
+
+    
+}
+
+.registerBtn{
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: none;
+
+    font-family: Almarai,Arial;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: var(--secondaryColor);
+    color: var(--backgroundColor);
+
+    cursor: pointer;
+    transition: all ease 0.5s;
+
+    
+}
+
+.registerBtn:hover{
+    background-color: #e3e1e17e;
 }
 
 h1,h2{
