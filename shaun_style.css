@@ -145,3 +145,40 @@ p{
     padding: 10px;
     margin-top: 20px;
 }
+
+.sixMounthCourses{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--backgroundColor);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+
+    img{
+        border-radius: 10px;
+    }
+}
+
+.course1,.course2,.course3,.course4{
+    .course_name{
+        width: 70px;
+        height: 30px;
+        background-color: var(--backgroundColor);
+        color: var(--secondaryColor);
+        border-style:  none;
+        text-decoration: underline;
+    }
+
+    p{
+        display: block;
+        background-color: var(--backgroundColor);
+        color: var(--secondaryColor);
+        border-style: groove;
+        border-radius: 5px;
+        width: 300px;
+        height: 150px;
+        padding: 5px;
+        font-size: 20px;
+    }
+}
