@@ -16,18 +16,17 @@
 </head>
 <body>
     <header>
-        <img src="image_Arain/logo.png" alt=""  class="logo">
+        <img src="image_Arain/logo.png" alt=""  class="logo" width="100px">
 
         <nav>
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./six_week.html">Cources</a></li>
-                <li><a href="">Contact</a></li>
-                <button><a href="">Sign In</a></button>
-                <button><a href="">Register</a></button>
-                <li>
-                    <img src="image_Arain/shopping-cart.png" alt="" class="icon">
-                </li>
+                <li><a href="./index.html" class="link">Home</a></li>
+                <li><a href="./six_mounth.html" class="link">Six Month Cources</a></li>
+                <li><a href="./six_week.html" class="link">Six Week Cources</a></li>
+                <li><a href="./contact_page.html" class="link">Contact</a></li>
+                <li><button class="signInBtn">Sign In</button></li>
+                <li><button class="registerBtn">Register</button></li>
+                <img src="image_Arain/shopping-cart.png" alt="shopping Cart" href="./calculate_fees.html" class="icon">
             </ul>
         </nav>
     </header>
@@ -38,27 +37,37 @@
 
             <div class="selectedCourses">
                 <img src="image_Arain/trialPic.png" alt="" width="200px" height="200px">
-                <p>Ths is course 1 a short summer of the course will apear here and the price <br><br>R00</p>
+                <p>Ths is course 1 a short summery of the course will apear here and the price <br><br>R00</p>
             </div>
 
             <div class="selectedCourses">
                 <img src="image_Arain/trialPic.png" alt="" width="200px" height="200px">
-                <p>This is course 2 a short summer of the course will apear here and the price <br><br>R00</p>
+                <p>This is course 2 a short summery of the course will apear here and the price <br><br>R00</p>
             </div>
 
             <div class="selectedCourses">
                 <img src="image_Arain/trialPic.png" alt="" width="200px" height="200px">
-                <p>This is course 3 a short summer of the course will apear here and the price <br><br>R00</p>
+                <p>This is course 3 a short summery of the course will apear here and the price <br><br>R00</p>
+            </div>
+
+            <div class="selectedCourses">
+                <img src="image_Arain/trialPic.png" alt="" width="200px" height="200px">
+                <p>This is course 4 a short summery of the course will apear here and the price <br><br>R00</p>
+            </div>
+
+            <div class="selectedCourses">
+                <img src="image_Arain/trialPic.png" alt="" width="200px" height="200px">
+                <p>This is course 5 a short summery of the course will apear here and the price <br><br>R00</p>
             </div>
 
         </div>
 
         <div id="totalFees">
             <p id="cartTotal">Cart Total</p>
-            <p> Discount: R00</p>
+            <p>Discount: R00</p>
             <p>Total: R00</p>
-
-            <button class="btnCheckOut">Checkout</button>
+            <br><br><br>
+            <button class="checkoutBtn">Checkout</button>
         </div>
 
         <div class="personalInfo">
@@ -75,7 +84,7 @@
               <label for="message">Message</label>
               <textarea type="text" placeholder="Enter your message" name="message" rows="10" cols="40"></textarea>
       
-              <button>SEND</button>
+              <button id="sendBtn">SEND</button>
             </div>
 
         </div>
