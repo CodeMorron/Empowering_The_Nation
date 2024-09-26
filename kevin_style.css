@@ -1,12 +1,12 @@
 :root{
-    --backgroundColor:#0C1D36;
-    --secondaryColor:#f9f9f9;
+    --backgroundColor:#23272A;
+    --secondaryColor:#FFFFFF;
     --accentuation:#F9CC0B;
 
 }
 
 *{
-    font-family: Almarai,Arial;
+    font-family: Poppins,Arial;
 }
 
 /*NAV BAR STYLING*/
@@ -16,7 +16,7 @@ header{
   justify-content: space-between;
   align-items: center;
   background-color: var(--secondaryColor);
-  font-family: Almarai,Arial;
+  font-family: Poppins,Arial;
 
   border-bottom:0.1px var(--backgroundColor) solid;
   margin: -10px;
@@ -80,7 +80,7 @@ ul{
     border-radius: 20px;
     border: none;
 
-    font-family: Almarai,Arial;
+    font-family: Poppins,Arial;
     font-weight: 700;
     font-size: 14px;
     background-color: var(--backgroundColor);
@@ -96,7 +96,7 @@ ul{
     border-radius: 20px;
     border: none;
 
-    font-family: Almarai,Arial;
+    font-family: Poppins,Arial;
     font-weight: 700;
     font-size: 14px;
     background-color: var(--secondaryColor);
@@ -121,7 +121,7 @@ ul{
     color: var(--backgroundColor);
     background-color: var(--secondaryColor);
     width: 900px;
-    font-family: Almarai,Arial;
+    font-family: Poppins,Arial;
     padding: 20px;
 
     margin-left: 40px;
@@ -160,7 +160,7 @@ ul{
         background-color: var(--accentuation);
         color: var(--secondaryColor);
 
-        font-family: Almarai,Arial;
+        font-family: Poppins,Arial;
         font-size: 14px;
         font-weight: 700;
         border: none;
@@ -184,7 +184,7 @@ ul{
 
         font-weight: Regular;
 
-        font-family: Almarai;
+        font-family: Poppins;
 
         line-height: 18px;
 
@@ -200,49 +200,68 @@ ul{
     }
 }
 
-.reviewContainer{
-    margin-top: 60px;
-    margin-left: 40px;
-    color: var(--backgroundColor);
-    background-color: var(--secondaryColor);
+.reviews {
     display: flex;
-    column-gap: 100px;
-
-    width: 500px;
-    padding: 30px;
-
-    border-radius: 10px ;
-
-    p{
-        margin-top: -5px;
-    }
-
-
-    
-}
-
-.reviewerName{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .reviewCard {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .reviewCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .reviewerProfile {
     display: flex;
-    justify-content: left;
     align-items: center;
-    
-    img{
-        border-radius: 40px;
-    }
-
-}
-
-.reviewInfo{
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    justify-content: center;
-    
-    p{
-        margin-top: -15px;
-    }
-}
-
+    margin-bottom: 15px;
+  }
+  
+  .reviewerImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .reviewerInfo h4 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .reviewDate {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .reviewTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .reviewText {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .rating {
+    color: #f4c430; /* Gold color for stars */
+    font-size: 1.2rem;
+  }
+  
 
 .starBtn{
     background: transparent;
@@ -307,7 +326,7 @@ ul{
     padding: 15px 30px;
     border-radius: 10px;
     
-    font-family: Almarai,Arial;
+    font-family: Poppins,Arial;
     font-weight: 700;
 
     font-size: 16px;

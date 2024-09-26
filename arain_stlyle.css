@@ -1,11 +1,11 @@
 :root{
-    --backgroundColor:#0C1D36;
-    --secondaryColor:#f9f9f9;
+    --backgroundColor:#23272A;
+    --secondaryColor:#FFFFFF;
     --accentuation:#F9CC0B;
 }
 
 *{
-    font-family: Almarai,Arial;
+    font-family: Roboto,Arial;
 }
 
 /*NAV BAR STYLING*/
@@ -143,82 +143,101 @@ ul{
 }
 
 /*CALCULATE FEES STYLING*/
-
-.myCourses{
+.myCourses {
     display: flex;
     justify-content: space-evenly;
     background-color: var(--backgroundColor);
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: auto;
     padding: 10px;
     margin-top: 15px;
     float: left;
     flex-direction: column;
 
-    img{
+    img {
         border-radius: 15px;
     }
 }
 
-h1{
+h1 {
     color: var(--secondaryColor);
     text-decoration: underline;
     padding-left: 10px;
 }
 
-.selectedCourses{
+.selectedCourses {
     display: flex;
-    float: left;
-    row-gap: 5px;
-    border-style: double;
-    border-radius: 10px;
-    border-color: var(--backgroundColor);
+    flex-wrap: wrap; /* Allows wrapping for better responsiveness */
+    gap: 20px; /* Replaces row-gap for more flexible spacing */
     background-color: var(--secondaryColor);
-    height: min-content;
     color: var(--backgroundColor);
-    border-width: 10px;
-    padding: 5px;
+    border-radius: 10px;
+    padding: 10px; /* Increased padding for consistency */
+
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
-#totalFees{
+#totalFees {
     background-color: var(--secondaryColor);
     color: var(--backgroundColor);
-    border-style: double;
     border-radius: 10px;
     border-width: 10px;
     border-color: var(--backgroundColor);
-    width: 580px;
-    height: 500px;
+    width: 100%;
+    max-width: 580px;
+    height: auto; /* Adjusted to auto to avoid hardcoding */
     margin-top: 115px;
     float: right;
-
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    padding: 20px; /* Added padding for inner spacing */
     margin-left: 15px;
 
-    p{
+    p {
         font-size: 25px;
         font-weight: 600;
         padding: 10px;
     }
 }
 
-#cartTotal{
+#cartTotal {
     text-decoration: underline;
 }
 
-.checkoutBtn{
-    padding: 6px 18px;
+.checkoutBtn {
+    padding: 10px 20px; /* Increased padding for better button proportions */
     border-radius: 20px;
     border: none;
-    font-family: Almarai,Arial;
+    font-family: Almarai, Arial;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px; /* Slightly increased font size */
     background-color: var(--backgroundColor);
     color: var(--secondaryColor);
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Added transition for hover effect */
+}
+
+.checkoutBtn:hover {
+    background-color: var(--accentuation); /* Highlight on hover for better UI feedback */
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media only screen and (max-width: 768px) {
+    .myCourses, #totalFees {
+        width: 100%;
+        margin: 10px 0;
+        float: none; /* Adjust float for better stacking on smaller screens */
+    }
+
+    .selectedCourses {
+        flex-direction: column; /* Stack courses on top of each other for smaller screens */
+    }
+
+    .checkoutBtn {
+        width: 100%;
+    }
 }
 
 /*PERSONAL INFO STYLING*/

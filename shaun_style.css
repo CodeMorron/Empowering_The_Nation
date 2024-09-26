@@ -1,12 +1,12 @@
 :root{
-    --backgroundColor:#0C1D36;
-    --secondaryColor:#f9f9f9;
+    --backgroundColor:#23272A;
+    --secondaryColor:#FFFFFF;
     --accentuation:#F9CC0B;
 
 }
 
 *{
-    font-family: Almarai,Arial;
+    font-family: Poppins,Arial;
 }
 
 /*NAV BAR STYLING*/
@@ -16,7 +16,7 @@ header{
   justify-content: space-between;
   align-items: center;
   background-color: var(--secondaryColor);
-  font-family: Almarai,Arial;
+  font-family: Poppins,Arial;
 
   border-bottom:0.1px var(--backgroundColor) solid;
   margin: -10px;
@@ -80,7 +80,7 @@ ul{
     border-radius: 20px;
     border: none;
 
-    font-family: Almarai,Arial;
+    font-family: Poppins,Arial;
     font-weight: 700;
     font-size: 14px;
     background-color: var(--backgroundColor);
@@ -96,7 +96,7 @@ ul{
     border-radius: 20px;
     border: none;
 
-    font-family: Almarai,Arial;
+    font-family: Poppins,Arial;
     font-weight: 700;
     font-size: 14px;
     background-color: var(--secondaryColor);
@@ -114,7 +114,7 @@ ul{
 
 h1,h2{
     color: var(--secondaryColor); text-align: center; 
-    text-decoration: underline;
+   
 }
 
 p{
@@ -122,29 +122,85 @@ p{
     display: flex;
     margin-right: 15px;
     margin-left: 15px;
-    font-size: 20px
+    font-size: 18px
 }
 
 .mainimage{
     display: flex;
     justify-content: left;
     align-items: center;
+
+   
+
+    img{
+        border-radius: 10px;
+        margin-left: 20px;
+    }
 }
 
-.reviews{
-    display: block;
-    justify-content: left;
-    align-items: center;
-}
-.reviews{
+.reviews {
     display: flex;
-    justify-content: space-evenly;
-    background-color: var(--backgroundColor);
-    width: auto;
-    height: auto;
-    padding: 10px;
-    margin-top: 20px;
-}
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .reviewCard {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .reviewCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .reviewerProfile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .reviewerImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .reviewerInfo h4 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .reviewDate {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .reviewTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .reviewText {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .rating {
+    color: #f4c430; /* Gold color for stars */
+    font-size: 1.2rem;
+  }
+  
+   
 
 .sixMounthCourses{
     display: flex;
@@ -162,23 +218,24 @@ p{
 
 .course1,.course2,.course3,.course4{
     .course_name{
-        width: 70px;
+        
         height: 30px;
         background-color: var(--backgroundColor);
         color: var(--secondaryColor);
         border-style:  none;
-        text-decoration: underline;
+       
     }
 
     p{
         display: block;
-        background-color: var(--backgroundColor);
-        color: var(--secondaryColor);
+        background-color: var(--secondaryColor);
+        color: var(--backgroundColor);
         border-style: groove;
-        border-radius: 5px;
+        border-radius: 10px;
         width: 300px;
         height: 150px;
         padding: 5px;
-        font-size: 20px;
+        font-size: 15px;
+        border: none;
     }
 }
