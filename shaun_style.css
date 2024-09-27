@@ -23,6 +23,34 @@ header{
   margin-bottom: 20px;
   
 }
+.topSection {
+  margin: -30px -10px 0; /* Combined margin shorthand for clarity */
+  background-color: var(--secondaryColor);
+  padding: 20px; /* Added padding for better spacing */
+  border-radius: 10px; /* Optional: rounded corners for a softer look */
+}
+
+.topSection h1,
+.topSection p { /* Use a comma to group selectors for clarity */
+  color: var(--backgroundColor);
+  margin: 0; /* Reset margin to avoid unwanted spacing */
+  
+}
+
+.topSection h1 {
+  font-size: 2em; /* Adjust font size for emphasis */
+  text-align: center; /* Centered heading for a cleaner layout */
+  margin-bottom: 20px;
+}
+
+.topSection p {
+  font-size: 1em; /* Set a standard font size for paragraphs */
+  line-height: 1.5; /* Improved line spacing for better readability */
+  text-align: justify; /* Justify text for a neater appearance */
+
+  margin-left: 20px;
+  width: 700px;
+}
 
 body{
     background-color: var(--backgroundColor);
