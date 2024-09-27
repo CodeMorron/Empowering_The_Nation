@@ -149,15 +149,27 @@ ul{
     background-color: var(--backgroundColor);
     width: 100%;
     max-width: 600px;
-    height: auto;
+    height: 720px;
     padding: 10px;
     margin-top: 15px;
     float: left;
     flex-direction: column;
 
+    overflow-y: auto;
+
     img {
         border-radius: 15px;
     }
+}
+
+.myCourses::-webkit-scrollbar {
+    width: 10px; 
+    background: transparent;
+}
+
+.myCourses::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px; 
 }
 
 h1 {
@@ -186,9 +198,9 @@ h1 {
     border-width: 10px;
     border-color: var(--backgroundColor);
     width: 100%;
-    max-width: 580px;
+    max-width: 570px;
     height: auto; /* Adjusted to auto to avoid hardcoding */
-    margin-top: 115px;
+    margin-top: 120px;
     float: right;
     display: flex;
     flex-direction: column;
@@ -270,7 +282,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 60px;
+    margin-right: 300px;
     float: inline-end;
     padding-right: 20px;
 }   
