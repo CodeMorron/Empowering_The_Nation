@@ -178,6 +178,10 @@ ul{
         background-color: var(--backgroundColor);
     }
 
+    .cartBtn:hover{
+        background-color: var(--accentuation);
+    }
+
     .courseDescription{
 
         font-size: 12px;

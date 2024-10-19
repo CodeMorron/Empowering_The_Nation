@@ -180,12 +180,12 @@ h1 {
 
 .selectedCourses {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping for better responsiveness */
-    gap: 20px; /* Replaces row-gap for more flexible spacing */
+    flex-wrap: wrap; 
+    gap: 20px; 
     background-color: var(--secondaryColor);
     color: var(--backgroundColor);
     border-radius: 10px;
-    padding: 10px; /* Increased padding for consistency */
+    padding: 10px; 
 
     margin-bottom: 20px;
     margin-left: 20px;
@@ -199,12 +199,12 @@ h1 {
     border-color: var(--backgroundColor);
     width: 100%;
     max-width: 570px;
-    height: auto; /* Adjusted to auto to avoid hardcoding */
+    height: auto; 
     margin-top: 120px;
     float: right;
     display: flex;
     flex-direction: column;
-    padding: 20px; /* Added padding for inner spacing */
+    padding: 20px; 
     margin-left: 15px;
 
     p {
@@ -219,20 +219,38 @@ h1 {
 }
 
 .checkoutBtn {
-    padding: 10px 20px; /* Increased padding for better button proportions */
+    margin-top: 20px;
+    padding: 10px 20px; 
     border-radius: 20px;
     border: none;
     font-family: Almarai, Arial;
     font-weight: 700;
-    font-size: 16px; /* Slightly increased font size */
+    font-size: 16px; 
     background-color: var(--backgroundColor);
     color: var(--secondaryColor);
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Added transition for hover effect */
+    transition: background-color 0.3s ease; 
 }
 
 .checkoutBtn:hover {
-    background-color: var(--accentuation); /* Highlight on hover for better UI feedback */
+    background-color: var(--accentuation); 
+}
+
+.clearCartBtn{
+    padding: 10px 20px; 
+    border-radius: 20px;
+    border: none;
+    font-family: Almarai, Arial;
+    font-weight: 700;
+    font-size: 16px; 
+    background-color: var(--backgroundColor);
+    color: var(--secondaryColor);
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.clearCartBtn:hover{
+    background-color: var(--accentuation);
 }
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
@@ -240,11 +258,11 @@ h1 {
     .myCourses, #totalFees {
         width: 100%;
         margin: 10px 0;
-        float: none; /* Adjust float for better stacking on smaller screens */
+        float: none; 
     }
 
     .selectedCourses {
-        flex-direction: column; /* Stack courses on top of each other for smaller screens */
+        flex-direction: column; 
     }
 
     .checkoutBtn {

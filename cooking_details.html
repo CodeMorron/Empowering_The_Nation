@@ -57,7 +57,7 @@
 
           <button class="buyBtn">BUY</button>
 
-          <button class="cartBtn">ADD TO CART</button>
+          <button class="cartBtn" onclick="addToCart('Cooking', 2200, './Image_Kevin/cooking.jpg')">ADD TO CART</button>
 
           <p class="courseDescription">
             To prepare and cook nutritious family meals that cater to the
@@ -182,5 +182,22 @@
         </div>
       </div>
     </main>
+
+    <script> // Script for adding course to cart page (calculate fees page)
+      function addToCart(courseName, coursePrice, imageUrl) {
+        const course = { name: courseName, price: coursePrice, image: imageUrl };
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+        // Check if the course is already in the cart
+        const exists = cart.find(item => item.name === courseName);
+        if (!exists) {
+          cart.push(course);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert(`${courseName} has been added to your cart!`);
+        } else {
+          alert(`${courseName} is already in your cart.`);
+        }
+      }
+    </script>
   </body>
 </html>
