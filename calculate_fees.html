@@ -42,9 +42,9 @@
         </div>
 
         <div id="totalFees">
-            <p id="cartTotal">Cart Total:</p>
+            <p id="cartTotal">Cart Total: <br> R0</p>
             <p>Discount: R0</p>
-            <p>Total: R</p> <!-- Placeholder total price -->
+            <p id="finalPrice">Final Total: R0</p>
             <br /><br /><br />
             <button class="clearCartBtn" onclick="clearCart()">Clear Cart</button>
             <button class="checkoutBtn">Checkout</button>
@@ -66,40 +66,74 @@
         </div>
     </main>
 
-    <script> // function to display item in cart
+    <script>
+        // Function to display items in cart and calculate total, discount, and final price
         function displayCart() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const cartContainer = document.querySelector('.selectedCourses');
-            cartContainer.innerHTML = ''; // Clear the container
-
+            cartContainer.innerHTML = ''; 
+    
             if (cart.length === 0) {
                 cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+                document.getElementById('cartTotal').innerText = 'Cart Total: R0';
+                document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = 'Discount: R0';
+                document.getElementById('finalPrice').innerText = 'Final Price: R0';
                 return;
             }
-
-            // make each course in a div container to aviod overlapping
+    
+            let totalPrice = 0; 
+    
+            // Display each course 
             cart.forEach(course => {
                 const courseDiv = document.createElement('div');
                 courseDiv.classList.add('selectedCourses');
                 courseDiv.innerHTML = `
                     <img src="${course.image}" alt="${course.name}" width="200px" height="200px" />
                     <p>
-                      <strong>Course Name:</strong> ${course.name} <br />
-                      <strong>Price:</strong> R${course.price}
+                        <strong>Course Name:</strong> ${course.name} <br />
+                        <strong>Price:</strong> R${course.price}
                     </p>
                 `;
                 cartContainer.appendChild(courseDiv);
+                totalPrice += course.price; 
             });
+    
+            // Calculate discount based on number of courses
+            let discountPercentage = 0;
+            if (cart.length === 2) {
+                discountPercentage = 5;
+            } else if (cart.length === 3) {
+                discountPercentage = 10;
+            } else if (cart.length > 3) {
+                discountPercentage = 15;
+            }
+    
+            const discountAmount = (totalPrice * discountPercentage) / 100;
+            const totalAfterDiscount = totalPrice - discountAmount;
+    
+            // Update prices in the cart
+            document.getElementById('cartTotal').innerText = `Cart Total: R${totalPrice}`;
+            document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = `Discount: R${discountAmount} (${discountPercentage}%)`;
+            document.getElementById('finalPrice').innerText = `Final Price: R${totalAfterDiscount}`;
         }
-
+    
         window.onload = displayCart;
-
-        // Function to clear cart
-        function clearCart() {
+    
+        // Function to clear entire cart
+        function clearCart(){
             localStorage.removeItem('cart');
-            displayCart(); 
-            alert("Your cart has been cleared.");
+            displayCart();
+            alert("Your cart has been cleared")
+
+            
+            document.getElementById('cartTotal').innerText = 'Cart Total: R0';
+            document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = 'Discount: R0';
+            document.getElementById('finalPrice').innerText = 'Final Price: R0';
         }
-     </script>
+    </script>
+    
+    
+    
+    
   </body>
 </html>
