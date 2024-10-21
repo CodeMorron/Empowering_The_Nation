@@ -55,7 +55,7 @@
 
           <p>R2000</p>
 
-          <button class="buyBtn">BUY</button>
+          <button class="buyBtn" onclick="buyCourse('Life Skills', 2000, './Image_Kevin/life_skills.jpg')">BUY</button>
 
           <button class="cartBtn" onclick="addToCart('Life Skills', 2000, './Image_Kevin/life_skills.jpg')">ADD TO CART</button>
 
@@ -175,7 +175,8 @@
       </div>
     </main>
 
-    <script> // Script for adding course to cart page (calculate fees page)
+    <script> 
+      //Function for adding item to cart page
       function addToCart(courseName, coursePrice, imageUrl) {
         const course = { name: courseName, price: coursePrice, image: imageUrl };
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -189,6 +190,12 @@
         } else {
           alert(`${courseName} is already in your cart.`);
         }
+      }
+
+      // Function to buy this single item
+      function buyCourse(courseName, coursePrice, imageUrl) {
+       addToCart(courseName, coursePrice, imageUrl, false); 
+       window.location.href = './calculate_fees.html'; 
       }
     </script>
   </body>

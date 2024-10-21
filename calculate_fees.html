@@ -123,8 +123,6 @@
         function clearCart(){
             localStorage.removeItem('cart');
             displayCart();
-            alert("Your cart has been cleared")
-
             
             document.getElementById('cartTotal').innerText = 'Cart Total: R0';
             document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = 'Discount: R0';
