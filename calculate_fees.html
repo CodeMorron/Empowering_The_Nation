@@ -54,84 +54,94 @@
             <div class="personalInfoBox">
                 <h1>Enter your details:</h1>
                 <label for="name">Name</label>
-                <input type="text" placeholder="Enter your name" name="name" />
+                <input type="text" placeholder="Enter your name" name="name" id="name" />
                 <label for="surname">Surname</label>
-                <input type="text" placeholder="Enter your surname" name="surname" />
+                <input type="text" placeholder="Enter your surname" name="surname" id="surname" />
                 <label for="email">Email</label>
-                <input type="email" placeholder="Enter your email" name="email" />
+                <input type="email" placeholder="Enter your email" name="email" id="email" />
                 <label for="message">Message</label>
-                <textarea type="text" placeholder="Enter your message" name="message" rows="10" cols="40"></textarea>
-                <button id="sendBtn">SEND</button>
+                <textarea type="text" placeholder="Enter your message" name="message" rows="10" cols="40" id="message"></textarea>
+                <button id="sendBtn" onclick="submitForm()">SEND</button>
             </div>
         </div>
-    </main>
-
-    <script>
-        // Function to display items in cart and calculate total, discount, and final price
-        function displayCart() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const cartContainer = document.querySelector('.selectedCourses');
-            cartContainer.innerHTML = ''; 
-    
-            if (cart.length === 0) {
-                cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+        </main>
+        
+        <script>
+            // Function to display items in cart and calculate total, discount, and final price
+            function displayCart() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartContainer = document.querySelector('.selectedCourses');
+                cartContainer.innerHTML = ''; 
+        
+                if (cart.length === 0) {
+                    cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+                    document.getElementById('cartTotal').innerText = 'Cart Total: R0';
+                    document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = 'Discount: R0';
+                    document.getElementById('finalPrice').innerText = 'Final Price: R0';
+                    return;
+                }
+        
+                let totalPrice = 0; 
+        
+                // Display each course 
+                cart.forEach(course => {
+                    const courseDiv = document.createElement('div');
+                    courseDiv.classList.add('selectedCourses');
+                    courseDiv.innerHTML = `
+                        <img src="${course.image}" alt="${course.name}" width="200px" height="200px" />
+                        <p>
+                            <strong>Course Name:</strong> ${course.name} <br />
+                            <strong>Price:</strong> R${course.price}
+                        </p>
+                    `;
+                    cartContainer.appendChild(courseDiv);
+                    totalPrice += course.price; 
+                });
+        
+                // Calculate discount based on number of courses
+                let discountPercentage = 0;
+                if (cart.length === 2) {
+                    discountPercentage = 5;
+                } else if (cart.length === 3) {
+                    discountPercentage = 10;
+                } else if (cart.length > 3) {
+                    discountPercentage = 15;
+                }
+        
+                const discountAmount = (totalPrice * discountPercentage) / 100;
+                const totalAfterDiscount = totalPrice - discountAmount;
+        
+                // Update prices in the cart
+                document.getElementById('cartTotal').innerText = `Cart Total: R${totalPrice}`;
+                document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = `Discount: R${discountAmount} (${discountPercentage}%)`;
+                document.getElementById('finalPrice').innerText = `Final Price: R${totalAfterDiscount}`;
+            }
+        
+            window.onload = displayCart;
+        
+            // Function to clear entire cart
+            function clearCart(){
+                localStorage.removeItem('cart');
+                displayCart();
+                
                 document.getElementById('cartTotal').innerText = 'Cart Total: R0';
                 document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = 'Discount: R0';
                 document.getElementById('finalPrice').innerText = 'Final Price: R0';
-                return;
             }
-    
-            let totalPrice = 0; 
-    
-            // Display each course 
-            cart.forEach(course => {
-                const courseDiv = document.createElement('div');
-                courseDiv.classList.add('selectedCourses');
-                courseDiv.innerHTML = `
-                    <img src="${course.image}" alt="${course.name}" width="200px" height="200px" />
-                    <p>
-                        <strong>Course Name:</strong> ${course.name} <br />
-                        <strong>Price:</strong> R${course.price}
-                    </p>
-                `;
-                cartContainer.appendChild(courseDiv);
-                totalPrice += course.price; 
-            });
-    
-            // Calculate discount based on number of courses
-            let discountPercentage = 0;
-            if (cart.length === 2) {
-                discountPercentage = 5;
-            } else if (cart.length === 3) {
-                discountPercentage = 10;
-            } else if (cart.length > 3) {
-                discountPercentage = 15;
+        
+            // Function to handle form submission, clear input fields, and display a submission prompt
+            function submitForm() {
+                // Clear all the input fields
+                document.getElementById("name").value = "";
+                document.getElementById("surname").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+        
+                // Show a submission alert
+                alert("Submission sent!");
             }
-    
-            const discountAmount = (totalPrice * discountPercentage) / 100;
-            const totalAfterDiscount = totalPrice - discountAmount;
-    
-            // Update prices in the cart
-            document.getElementById('cartTotal').innerText = `Cart Total: R${totalPrice}`;
-            document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = `Discount: R${discountAmount} (${discountPercentage}%)`;
-            document.getElementById('finalPrice').innerText = `Final Price: R${totalAfterDiscount}`;
-        }
-    
-        window.onload = displayCart;
-    
-        // Function to clear entire cart
-        function clearCart(){
-            localStorage.removeItem('cart');
-            displayCart();
-            
-            document.getElementById('cartTotal').innerText = 'Cart Total: R0';
-            document.getElementById('totalFees').querySelector('p:nth-child(2)').innerText = 'Discount: R0';
-            document.getElementById('finalPrice').innerText = 'Final Price: R0';
-        }
-    </script>
-    
-    
-    
-    
-  </body>
-</html>
+        </script>
+        
+        </body>
+        </html>
+         
