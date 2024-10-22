@@ -26,6 +26,7 @@ header{
 
 body{
     background-color: var(--backgroundColor);
+    overflow-x: hidden;
 }
 
 
@@ -354,5 +355,136 @@ ul{
 
     column-gap: 40px;
 }
+
+.authorAvatar {
+    width: 180px;
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .authorInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    column-gap: 60px;
+  }
+  
+  .authorInfo > h1 {
+    font-size: 40px;
+  }
+  
+  .authorInfoTxt {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    column-gap: 40px;
+    padding-bottom: 100px;
+  
+    p {
+      width: 600px;
+      line-height: 30px;
+    }
+  
+    img {
+      border-radius: 10px;
+      float: left;
+    }
+  }
+  
+  .authorInfoContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  
+    background-color: var(--nordGrey);
+    color: var(--nordWhite);
+  }
+  
+  #subTitle {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  
+footer {
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between sections */
+    align-items: flex-start; /* Align items to the start of the footer */
+    padding: 10px; /* Adjust padding as needed */
+  
+    flex-wrap: nowrap; /* Prevent wrapping */
+    margin-top: 20px; /* Adjust if needed */
+    width: 100%; /* Ensure the footer stretches across the full width */
+  
+   
+  }
+  
+  /* Footer section styles */
+  .footerNav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the section */
+    margin: 0 10px; /* Adjust spacing between sections */
+  
+  }
+  
+  .footerNav h3 {
+    color: var(--nordWhite);
+    margin-bottom: 10px;
+    margin-left: -8px; /* Adjust spacing */
+  }
+  
+  .footerNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footerNav li {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+  }
+  
+  .footerNav a {
+    text-decoration: none;
+    color: var(--backgroundColor);
+    transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footerNav a:hover {
+    text-decoration: underline;
+    color: var(--accentuation); /* Adjust color on hover for better visual feedback */
+    transform: scale(1.05); /* Slightly enlarges the link on hover for a subtle emphasis */
+  }
+  
+  /* Legal text styles */
+  .legalTxt {
+    color: var(--backgroundColor);
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .legalInfo{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+  }
+  
 
 

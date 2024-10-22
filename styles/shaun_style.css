@@ -7,6 +7,7 @@
 
 *{
     font-family: Poppins,Arial;
+    
 }
 
 /*NAV BAR STYLING*/
@@ -19,8 +20,10 @@ header{
   font-family: Poppins,Arial;
 
   border-bottom:0.1px var(--backgroundColor) solid;
-  margin: -10px;
+ 
   margin-bottom: 20px;
+  
+  padding-bottom: 20px;
   
 }
 .topSection {
@@ -52,9 +55,20 @@ header{
   width: 700px;
 }
 
-body{
-    background-color: var(--backgroundColor);
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--backgroundColor);
+  overflow-x: hidden;
 }
+
+main {
+  flex: 1;
+}
+
 
 
 a{
@@ -155,7 +169,7 @@ p{
 
 .mainimage{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 
    
@@ -266,4 +280,114 @@ p{
         font-size: 15px;
         border: none;
     }
+}
+
+
+.infoBuble{
+  background-color: var(--backgroundColor);
+ 
+  padding: 24px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  p{
+    color: var(--secondaryColor);
+  }
+}
+
+.actionBtn{
+  padding:10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 20px;
+  margin-top: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--accentuation);
+  color: var(--secondaryColor);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: all linear 0.5s;
+}
+
+.actionBtn:hover{
+  background-color: var(--secondaryColor);
+  color: var(--backgroundColor);
+}
+
+
+footer {
+  background-color: var(--secondaryColor);
+  display: flex;
+  justify-content: space-between; /* Adjust spacing between sections */
+  align-items: flex-start; /* Align items to the start of the footer */
+  padding: 10px; /* Adjust padding as needed */
+
+  flex-wrap: nowrap; /* Prevent wrapping */
+  margin-top: 20px; /* Adjust if needed */
+  width: 100%; /* Ensure the footer stretches across the full width */
+
+ 
+}
+
+/* Footer section styles */
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the section */
+  margin: 0 10px; /* Adjust spacing between sections */
+
+}
+
+.footerNav h3 {
+  color: var(--nordWhite);
+  margin-bottom: 10px;
+  margin-left: -8px; /* Adjust spacing */
+}
+
+.footerNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerNav li {
+  margin-bottom: 10px; /* Adjust spacing between list items */
+}
+
+.footerNav a {
+  text-decoration: none;
+  color: var(--backgroundColor);
+  transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.3s ease;
+}
+
+.footerNav a:hover {
+  text-decoration: underline;
+  color: var(--accentuation); /* Adjust color on hover for better visual feedback */
+  transform: scale(1.05); /* Slightly enlarges the link on hover for a subtle emphasis */
+}
+
+/* Legal text styles */
+.legalTxt {
+  color: var(--backgroundColor);
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.legalInfo{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
 }
