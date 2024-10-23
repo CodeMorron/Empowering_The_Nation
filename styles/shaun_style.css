@@ -1,311 +1,288 @@
-:root{
-    --backgroundColor:#23272A;
-    --secondaryColor:#FFFFFF;
-    --accentuation:#F9CC0B;
-
+:root {
+  --backgroundColor: #23272A;
+  --secondaryColor: #FFFFFF;
+  --accentuation: #F9CC0B;
 }
 
-*{
-    font-family: Poppins,Arial;
-    
+* {
+  font-family: Poppins, Arial, sans-serif;
+  box-sizing: border-box; /* Add box-sizing for better padding/margin handling */
 }
 
-/*NAV BAR STYLING*/
-header{
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--secondaryColor);
-  font-family: Poppins,Arial;
-
-  border-bottom:0.1px var(--backgroundColor) solid;
- 
-  margin-bottom: 20px;
-  
-  padding-bottom: 20px;
-  
-}
-.topSection {
-  margin: -30px -10px 0; /* Combined margin shorthand for clarity */
-  background-color: var(--secondaryColor);
-  padding: 20px; /* Added padding for better spacing */
-  border-radius: 10px; /* Optional: rounded corners for a softer look */
-}
-
-.topSection h1,
-.topSection p { /* Use a comma to group selectors for clarity */
-  color: var(--backgroundColor);
-  margin: 0; /* Reset margin to avoid unwanted spacing */
-  
-}
-
-.topSection h1 {
-  font-size: 2em; /* Adjust font size for emphasis */
-  text-align: center; /* Centered heading for a cleaner layout */
-  margin-bottom: 20px;
-}
-
-.topSection p {
-  font-size: 1em; /* Set a standard font size for paragraphs */
-  line-height: 1.5; /* Improved line spacing for better readability */
-  text-align: justify; /* Justify text for a neater appearance */
-
-  margin-left: 20px;
-  width: 700px;
-}
-
+/* BODY STYLES */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
   background-color: var(--backgroundColor);
   overflow-x: hidden;
 }
 
+/* HEADER STYLES */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondaryColor);
+  border-bottom: 0.1px var(--backgroundColor) solid;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.bubleTitleTxt {
+  margin-left: 20px;
+}
+
+.topSection {
+  margin: -30px -10px 0;
+  background-color: var(--secondaryColor);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.topSection h1,
+.topSection p {
+  color: var(--backgroundColor);
+  margin: 0;
+}
+
+.topSection h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topSection p {
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0 20px;
+  max-width: 700px;
+}
+
+/* NAVBAR STYLES */
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  float: right;
+  margin-right: 40px;
+}
+
+a {
+  color: var(--backgroundColor);
+  text-decoration: none;
+}
+
+.link {
+  transition: all ease 0.5s;
+  border-radius: 20px;
+}
+
+.link:hover {
+  background-color: var(--backgroundColor);
+  color: var(--secondaryColor);
+  padding: 10px 18px;
+}
+
+.icon {
+  width: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.signInBtn,
+.registerBtn {
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.signInBtn {
+  background-color: var(--backgroundColor);
+  color: var(--secondaryColor);
+}
+
+.registerBtn {
+  background-color: var(--secondaryColor);
+  color: var(--backgroundColor);
+  transition: all ease 0.5s;
+}
+
+.registerBtn:hover {
+  background-color: #e3e1e17e;
+}
+
+/* MAIN STYLES */
 main {
   flex: 1;
 }
 
-
-
-a{
- color: var(--backgroundColor);
- text-decoration: none;
+h1,
+h2 {
+  color: var(--secondaryColor);
+  text-align: center;
 }
 
-.link{
-    transition: all ease 0.5s;
-    border-radius: 20px;
+p {
+  color: var(--secondaryColor);
+  margin: 0 15px;
+  font-size: 18px;
 }
 
-
-
-.link:hover{
-        background-color: var(--backgroundColor);
-        color: var(--secondaryColor);
-        padding: 6px 18px;
- }
-
-
-ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-    float: right;
-    margin-right: 40px;
-
-   
-
-    
+.mainimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.icon{
-    width: 30px;
+.mainimage img {
+  border-radius: 10px;
+  margin-left: 20px;
 }
 
-.logo{
-    
-    display: flex;
-    align-items: center;
-    margin-left: 40px;
-   
-}
-
-.signInBtn{
-    padding: 6px 18px;
-    border-radius: 20px;
-    border: none;
-
-    font-family: Poppins,Arial;
-    font-weight: 700;
-    font-size: 14px;
-    background-color: var(--backgroundColor);
-    color: var(--secondaryColor);
-
-    cursor: pointer;
-
-    
-}
-
-.registerBtn{
-    padding: 6px 18px;
-    border-radius: 20px;
-    border: none;
-
-    font-family: Poppins,Arial;
-    font-weight: 700;
-    font-size: 14px;
-    background-color: var(--secondaryColor);
-    color: var(--backgroundColor);
-
-    cursor: pointer;
-    transition: all ease 0.5s;
-
-    
-}
-
-.registerBtn:hover{
-    background-color: #e3e1e17e;
-}
-
-h1,h2{
-    color: var(--secondaryColor); text-align: center; 
-   
-}
-
-p{
-    color: var(--secondaryColor);
-    display: flex;
-    margin-right: 15px;
-    margin-left: 15px;
-    font-size: 18px
-}
-
-.mainimage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-   
-
-    img{
-        border-radius: 10px;
-        margin-left: 20px;
-    }
-}
-
+/* REVIEWS STYLES */
 .reviews {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .reviewCard {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    transition: transform 0.3s ease;
-  }
-  
-  .reviewCard:hover {
-    transform: translateY(-10px);
-  }
-  
-  .reviewerProfile {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .reviewerImage {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-  }
-  
-  .reviewerInfo h4 {
-    margin: 0;
-    font-size: 1.1rem;
-  }
-  
-  .reviewDate {
-    font-size: 0.9rem;
-    color: #888;
-  }
-  
-  .reviewTitle {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .reviewText {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .rating {
-    color: #f4c430; /* Gold color for stars */
-    font-size: 1.2rem;
-  }
-  
-   
-
-.sixMounthCourses{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: var(--backgroundColor);
-    width: auto;
-    height: auto;
-    padding: 10px;
-    margin-top: 20px;
-
-    img{
-        border-radius: 10px;
-    }
+  display: grid; /* Changed to grid */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
 }
 
-.course1,.course2,.course3,.course4{
-    .course_name{
-        
-        height: 30px;
-        background-color: var(--backgroundColor);
-        color: var(--secondaryColor);
-        border-style:  none;
-       
-    }
-
-    p{
-        display: block;
-        background-color: var(--secondaryColor);
-        color: var(--backgroundColor);
-        border-style: groove;
-        border-radius: 10px;
-        width: 300px;
-        height: 150px;
-        padding: 5px;
-        font-size: 15px;
-        border: none;
-    }
+.reviewCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
 }
 
+.reviewCard:hover {
+  transform: translateY(-10px);
+}
 
-.infoBuble{
+.reviewerProfile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.reviewerImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.reviewerInfo h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.reviewDate {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.reviewTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.reviewText {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.rating {
+  color: #f4c430; /* Gold color for stars */
+  font-size: 1.2rem;
+}
+
+/* COURSES STYLES */
+.sixMonthCourses {
+  display: flex;
+  justify-content: space-evenly;
   background-color: var(--backgroundColor);
- 
-  padding: 24px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.course {
+  display: none;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0;
+  position: absolute;
+}
+
+.course.active {
+  display: block;
+  opacity: 1;
+  position: relative;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.course-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.course-navigation button {
+  margin: 0px 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.course-navigation button:hover {
+  background-color: #0056b3;
+}
+
+/* INFO BUBBLE STYLES */
+.infoBuble {
+  background-color: var(--backgroundColor);
+  padding: 24px 0;
   border-radius: 10px;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  p{
-    color: var(--secondaryColor);
-  }
 }
 
-.actionBtn{
-  padding:10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-left: 20px;
-  margin-top: 40px;
+.infoBuble p {
+  color: var(--secondaryColor);
+}
+
+/* ACTION BUTTON STYLES */
+.actionBtn {
+  padding: 10px 40px;
+  margin: 40px 20px 0;
   border-radius: 20px;
   border: none;
   background-color: var(--accentuation);
@@ -313,43 +290,37 @@ p{
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-
   transition: all linear 0.5s;
 }
 
-.actionBtn:hover{
+.actionBtn:hover {
   background-color: var(--secondaryColor);
   color: var(--backgroundColor);
 }
 
-
+/* FOOTER STYLES */
 footer {
   background-color: var(--secondaryColor);
   display: flex;
-  justify-content: space-between; /* Adjust spacing between sections */
-  align-items: flex-start; /* Align items to the start of the footer */
-  padding: 10px; /* Adjust padding as needed */
-
-  flex-wrap: nowrap; /* Prevent wrapping */
-  margin-top: 20px; /* Adjust if needed */
-  width: 100%; /* Ensure the footer stretches across the full width */
-
- 
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  width: 100%;
 }
 
-/* Footer section styles */
 .footerNav {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start of the section */
-  margin: 0 10px; /* Adjust spacing between sections */
-
+  align-items: flex-start;
+  margin: 0 10px;
 }
 
 .footerNav h3 {
-  color: var(--nordWhite);
+  color: var(--backgroundColor);
   margin-bottom: 10px;
-  margin-left: -8px; /* Adjust spacing */
+  margin-left: -8px;
 }
 
 .footerNav ul {
@@ -361,7 +332,7 @@ footer {
 }
 
 .footerNav li {
-  margin-bottom: 10px; /* Adjust spacing between list items */
+  margin-bottom: 10px;
 }
 
 .footerNav a {
@@ -372,11 +343,11 @@ footer {
 
 .footerNav a:hover {
   text-decoration: underline;
-  color: var(--accentuation); /* Adjust color on hover for better visual feedback */
-  transform: scale(1.05); /* Slightly enlarges the link on hover for a subtle emphasis */
+  color: var(--accentuation);
+  transform: scale(1.05);
 }
 
-/* Legal text styles */
+/* LEGAL TEXT STYLES */
 .legalTxt {
   color: var(--backgroundColor);
   margin-top: 20px;
@@ -384,10 +355,92 @@ footer {
   font-size: 14px;
 }
 
-.legalInfo{
+.legalInfo {
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: flex-start;
+}
+
+/* LIGHTBOX STYLES */
+.lightBoxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ANIMATIONS */
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  to {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+  .topSection p {
+    width: 100%;
+    margin: 0 10px;
+    font-size: 0.9em; /* Adjusting font size for smaller screens */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul {
+    float: none;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .sixMonthCourses {
+    flex-direction: column; /* Stack courses on smaller screens */
+  }
+
+  .course {
+    width: 90%; /* Use more width for course cards */
+    position: relative; /* Adjust position for stacking */
+  }
+
+  .reviewCard {
+    width: 90%; /* Use more width for review cards */
+  }
+
+  .footerNav {
+    align-items: center; /* Center footer nav items on small screens */
+  }
+
+  .footerNav h3 {
+    text-align: center; /* Center footer headings */
+  }
+}
+
+@media (min-width: 768px) {
+  .topSection {
+    padding: 40px; /* Increase padding for tablets */
+  }
+
+  .signInBtn, .registerBtn {
+    font-size: 16px; /* Larger buttons for tablets */
+  }
 }

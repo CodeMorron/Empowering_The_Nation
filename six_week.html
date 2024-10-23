@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Six Month Courses</title>
+    <title>Six Week Courses</title>
     <link rel="stylesheet" href="styles/shaun_style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,75 +16,110 @@
   <body>
     <header>
       <div class="logo">
-        <img src="./image_Arain/logo.png" alt="Logo" width="100px"/>
+        <img src="./image_Arain/logo.png" alt="Logo" width="100px" />
       </div>
       <nav>
         <ul>
           <li><a href="./index.html" class="link">Home</a></li>
+          <li><a href="about.html" class="link">About</a></li>
           <li><a href="six_month.html" class="link">Six Month Courses</a></li>
           <li><a href="./six_week.html" class="link">Six Week Courses</a></li>
           <li><a href="./contact_page.html" class="link">Contact</a></li>
           <li><button class="signInBtn">Sign In</button></li>
           <li><button class="registerBtn">Register</button></li>
-          <li> <a href="./calculate_fees.html"><img src="image_Arain/shopping-cart.png" alt="Shopping Cart" class="icon"></a></li>
+          <li> <a href="./calculate_fees.html"><img src="image_Arain/shopping-cart.png" alt="shopping Cart"
+                class="icon"></a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <div class="sixMounthCourses">
-        <div class="course1">
-          <a href="child_minding_details.html">
-            <img
-              src="image_Arain/child_minding.jpg"
-              alt="Child Minding"
-              width="310px"
-              height="250px"
-            />
-          </a>
-          <h3><a href="./child_minding_details.html" class="course_name">Child Minding</a></h3>
-          <p>
-            Description:<br />
-            To provide basic child and baby care <br />
-            <strong>Price:</strong> R750
-          </p>
-        </div>
-
-        <div class="course2">
-          <a href="cooking_details.html">
-            <img
-              src="image_Arain/cooking.jpg"
-              alt="Cooking"
-              width="310px"
-              height="250px"
-            />
-          </a>
-          <h3><a href="./cooking_details.html" class="course_name">Cooking</a></h3>
-          <p>
-            Description:<br />
-            To prepare and cook nutritious family meals <br />
-            <strong>Price:</strong> R750
-          </p>
-        </div>
-
-        <div class="course3">
-          <a href="garden_maintanance_details.html">
-            <img
-              src="image_Arain/garden_maintenance.jpg"
-              alt="Garden Maintenance"
-              width="310px"
-              height="250px"
-            />
-          </a>
-          <h3><a href="./garden_maintanance_details.html" class="course_name">Garden Maintanance</a></h3>
-          <p>
-            Description:<br />
-            To provide basic knowledge of watering, pruning, and planting in a
-            domestic garden.<br />
-            <strong>Price:</strong> R750
-          </p>
-        </div>
+    <main class="lightBoxContainer">
+      <!-- Lightbox-like Course container -->
+      <div id="course-container">
+        <a href="child_minding_details.html" class="course active" id="course1">
+          <img src="Image_Kevin/child_minding.jpg" alt="Sewing Course" />
+          <h3>Child Minding</h3>
+          <p>To provide basic child and baby care</p>
+          <p><strong>Price:</strong> R750</p>
+        </a>
+    
+        <a href="cooking_details.html" class="course" id="course2">
+          <img src="Image_Kevin/cooking.jpg" alt="Life Skills Course" />
+          <h3>Cooking</h3>
+          <p>To prepare and cook nutritious family meals</p>
+          <p><strong>Price:</strong> R750</p>
+        </a>
+    
+        <a href="garden_maintanance_details.html" class="course" id="course3">
+          <img src="Image_Kevin/garden_maintenance.jpg" alt="First Aid Course" />
+          <h3>Garden Maintenance</h3>
+          <p>To provide basic knowledge of watering, pruning and planting in a domestic garden.</p>
+          <p><strong>Price:</strong> R750</p>
+        </a>
+    
+    
+      <!-- Buttons to navigate through courses -->
+      <div class="course-navigation">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
       </div>
     </main>
+  </body>
+  <footer>
+    <div class="footerNav">
+      <h3>Navigation</h3>
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html" target="_blank" rel="noopener noreferrer" class="navLink">Home</a>
+          </li>
+          <li>
+            <a href="./about.html" target="_blank" rel="noopener noreferrer" class="navLink">About</a>
+          </li>
+          <li>
+            <a href="./six_month.html" target="_blank" rel="noopener noreferrer" class="navLink">Six Month Courses</a>
+          </li>
+          <li>
+            <a href="./six_week.html" target="_blank" rel="noopener noreferrer" class="navLink">Six Week Courses</a>
+          </li>
+          <li>
+            <a href="./contact_page.html" target="_blank" rel="noopener noreferrer" class="navLink">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footerNav">
+      <h3>Legal Info</h3>
+      <nav>
+        <ul>
+          <li>
+            <a href="./legal_info.html" target="_blank" rel="noopener noreferrer" class="navLink">Legal Info</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footerNav">
+      <h3>Informations</h3>
+      <nav>
+        <ul>
+          <li>
+            <a href="mailto:ruvunangizakev@gmail.com">Email: ruvunangizakev@gmail.com</a>
+          </li>
+          <li>
+            <a href="tel:+44 7563810862">Phone Contact: +44 7563810862</a>
+          </li>
+          <li>
+            <a
+              href="https://www.google.com/maps/dir/Willowbrook,+Roodepoort,+1724/IIE+MSA,+144+Peter+Rd,+Ruimsig,+Roodepoort,+1724/@-26.087122,27.874296,14z/data=!4m14!4m13!1m5!1m1!1s0x1e959e58143006c5:0xb5939e0743266f18!2m2!1d27.8794925!2d-26.0935472!1m5!1m1!1s0x1e959ef5277b96a7:0xc4aa15508f8e5e8c!2m2!1d27.876455!2d-26.083342!3e2?hl=en&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D">
+              IIE MSA, 144 Peter Rd, Ruimsig, Roodepoort, 1724
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+      <script src="/scripts/courses.js"></script>    
   </body>
 </html>

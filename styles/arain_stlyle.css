@@ -5,7 +5,7 @@
 }
 
 *{
-    font-family: Roboto,Arial;
+    font-family: Poppins,Arial;
 }
 
 /*NAV BAR STYLING*/
@@ -25,6 +25,7 @@ header{
 
 body{
     background-color: var(--backgroundColor);
+    overflow-x: hidden;
 }
 
 
@@ -43,7 +44,7 @@ a{
 .link:hover{
         background-color: var(--backgroundColor);
         color: var(--secondaryColor);
-        padding: 6px 18px;
+        padding: 10px 18px;
  }
 
 
@@ -174,7 +175,7 @@ ul{
 
 h1 {
     color: var(--secondaryColor);
-    text-decoration: underline;
+   
     padding-left: 10px;
 }
 
@@ -215,7 +216,7 @@ h1 {
 }
 
 #finalPrice {
-    text-decoration: underline;
+
 }
 
 .checkoutBtn {
@@ -281,9 +282,9 @@ h1 {
     width: 500px;
     color: var(--backgroundColor);
     background-color: var(--secondaryColor);
-    border-style: double;
+
     border-width: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
 
     h1{
@@ -297,17 +298,13 @@ h1 {
 }
 
 .personalInfo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
     margin-top: 60px;
-    margin-right: 300px;
-    float: inline-end;
     padding-right: 20px;
 }   
 
 #sendBtn{
-    padding: 6px 18px;
+    padding: 18px 21px;
     border-radius: 20px;
     border: none;
 
@@ -318,5 +315,86 @@ h1 {
     color: var(--secondaryColor);
 
     cursor: pointer;
+    transition: all ease 0.5s;
 }
 
+#sendBtn:hover{
+    padding: 20px 28px;
+}
+
+
+footer {
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between sections */
+    align-items: flex-start; /* Align items to the start of the footer */
+    padding: 10px; /* Adjust padding as needed */
+  
+    flex-wrap: nowrap; /* Prevent wrapping */
+    margin-top: 20px; /* Adjust if needed */
+    width: 100%; /* Ensure the footer stretches across the full width */
+  
+   
+  }
+  
+  /* Footer section styles */
+  .footerNav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the section */
+    margin: 0 10px; /* Adjust spacing between sections */
+  
+  }
+  
+  .footerNav h3 {
+    color: var(--nordWhite);
+    margin-bottom: 10px;
+    margin-left: -8px; /* Adjust spacing */
+  }
+  
+  .footerNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footerNav li {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+  }
+  
+  .footerNav a {
+    text-decoration: none;
+    color: var(--backgroundColor);
+    transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footerNav a:hover {
+    text-decoration: underline;
+    color: var(--accentuation); /* Adjust color on hover for better visual feedback */
+    transform: scale(1.05); /* Slightly enlarges the link on hover for a subtle emphasis */
+  }
+  
+  /* Legal text styles */
+  .legalTxt {
+    color: var(--backgroundColor);
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .legalInfo{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+  }
+
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
